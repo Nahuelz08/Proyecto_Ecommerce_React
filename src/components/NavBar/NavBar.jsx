@@ -1,10 +1,13 @@
-import React from "react";
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import Navbar from 'react-bootstrap/Navbar'
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+import NavDropdown from 'react-bootstrap/NavDropdown'
 import logo from '../../assets/logo.png'
+import CartWidget from './CartWidget'
 
 const NavBar = () => {
 	return (
-        <div>
+        <>
             <Navbar bg="dark" variant="dark" expand="lg">
                 <Container>
                     <Navbar.Brand href="#home">
@@ -34,9 +37,10 @@ const NavBar = () => {
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
+                    <CartWidget />
                 </Container>
             </Navbar>
-        </div>
+        </>
 	);
 };
 
