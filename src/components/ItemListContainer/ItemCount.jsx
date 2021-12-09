@@ -24,7 +24,7 @@ function ItemCount({inicial, max}) {
         <div>
             <div className="d-flex justify-content-center align-items-center">
                 <button onClick={btnRestar} className="btn btn-dark">-</button>
-                <h3 className="m-5">{value}</h3>
+                <h3 className="m-3">{value}</h3>
                 <button onClick={btnSumar} className="btn btn-dark">+</button>
             </div>
             <div className="d-flex justify-content-center">
