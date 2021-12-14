@@ -3,7 +3,7 @@ import ItemCount from "../ItemListContainer/ItemCount";
 
 function Item({prod}) {
 	return (
-		<div key={prod.id} className='col-md-4'>
+		<div className='col-md-4'>
             <div className="card w-75 mt-5">
                 <img src={prod.img} className="card-img-top" alt="..."/>
                 <div className="card-body text-center">
