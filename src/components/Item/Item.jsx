@@ -1,19 +1,19 @@
-import React from "react";
-import ItemCount from "../ItemListContainer/ItemCount";
+import {Link} from "react-router-dom";
+import './Item.css'
 
 function Item({prod}) {
 	return (
 		<div className='col-md-4'>
-            <div className="card w-75 mt-5">
-                <img src={prod.img} className="card-img-top" alt="..."/>
+            <div className="card mt-5">
+                <img src={prod.img} className="card-img-top card-img-products" alt={prod.name}/>
                 <div className="card-body text-center">
-                    <h5 className="card-title">{prod.name}</h5>
-                    <p className="card-text">{prod.category}</p>
-                    <p className="card-text">${prod.price}</p>
+                    <h4 className="card-title">{prod.name}</h4>
+                    <h5 className="card-text">${prod.price}</h5>
                 </div>
                 <div className="card-footer text-center">
-                    <a href="#" className="btn btn-primary">Ver Más</a>
-                    <ItemCount inicial={1} max={10} />
+                    <Link to={`/detalle/${prod.id}`}>
+                        <button className="btn btn-danger bg-gradient">Ver Más</button>
+                    </Link>
                 </div>
             </div>
 		</div>

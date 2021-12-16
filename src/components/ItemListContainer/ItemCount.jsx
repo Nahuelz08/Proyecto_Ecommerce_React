@@ -28,7 +28,7 @@ function ItemCount({inicial, max}) {
                 <button onClick={btnSumar} className="btn btn-dark">+</button>
             </div>
             <div className="d-flex justify-content-center">
-                <button onClick={onAdd} className="btn btn-primary mt-3">Añadir Carrito</button>
+                <button onClick={onAdd} className="btn btn-danger bg-gradient mt-3">Añadir Carrito</button>
             </div>
         </div>
     )

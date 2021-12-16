@@ -1,0 +1,23 @@
+
+
+
+/*vista mobile*/
+@media only screen and (min-width:0px) and (max-width:767px) {
+    .cart-desktop {
+        display: none;
+    }
+}
+
+/* vista entre desktop y mobile */
+@media only screen and (min-width:768px) and (max-width:1239px) {
+    .cart-desktop {
+        display: none;
+    }
+}
+
+/*vista desktop */
+@media only screen and (min-width:1240px) {
+    .cart-mobile {
+        display: none;
+    }
+}

@@ -9,7 +9,6 @@ function ItemDetail({producto}) {
                 <h3>Item Details</h3>
                 <h3 className="fw-bold">{producto.name}</h3>
                 <img src={producto.img} className="w-25"></img>
-                <h4>{producto.category}</h4>
                 <h4>${producto.price}</h4>
                 <p>{producto.description}</p>
                 <ItemCount inicial={1} max={10} />
