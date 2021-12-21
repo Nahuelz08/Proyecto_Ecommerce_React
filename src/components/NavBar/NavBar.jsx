@@ -22,12 +22,12 @@ const NavBar = () => {
                             />
                         </Navbar.Brand>
                     </Link>
-                    <Link className="cart-mobile" to="/cart">
+                    <Link className="cart-mobile" style={{paddingRight:'2rem'}} to="/cart">
                         <CartWidget />
                     </Link> 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
-                        <Nav>
+                        <Nav className="align-items-center">
                             <NavLink className="nav-link" to="/">
                                 Home
                             </NavLink>

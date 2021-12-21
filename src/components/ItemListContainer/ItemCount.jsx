@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function ItemCount({inicial, max}) {
+function ItemCount({inicial, max, onAdd}) {
 
     const [value, setValue] = useState(inicial)
 
@@ -13,12 +13,6 @@ function ItemCount({inicial, max}) {
     const btnRestar = () => {
         value > inicial ?   setValue(value - 1) : console.log("No puedes añadir 0 productos al carrito")
     }
-
-    // Agregar al carrito, muestra por consola la cantidad añadida
-    const onAdd = () => {
-        console.log("Agregaste " + value + " al carrito!")
-        setValue(inicial)
-    }
     
     return (
         <div>
@@ -28,7 +22,7 @@ function ItemCount({inicial, max}) {
                 <button onClick={btnSumar} className="btn btn-dark">+</button>
             </div>
             <div className="d-flex justify-content-center">
-                <button onClick={onAdd} className="btn btn-danger bg-gradient mt-3">Añadir Carrito</button>
+                <button onClick={()=> onAdd(value)} className="btn btn-danger bg-gradient mt-3">Añadir Carrito</button>
             </div>
         </div>
     )
