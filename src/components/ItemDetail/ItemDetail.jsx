@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import {Link} from "react-router-dom";
+import { CartContext } from '../CartContext/CartContext';
 import ItemCount from '../ItemListContainer/ItemCount'
 import './ItemDetail.css'
 
@@ -7,10 +8,14 @@ function ItemDetail({producto}) {
 
     const [irCarrito, setIrCarrito] = useState(false)
 
+    const {cartList, agregarAlCarrito} = useContext(CartContext)
+
     // Agregar al carrito, muestra por consola la cantidad añadida
     const onAdd = (cantidad) => {
         console.log("Agregaste " + cantidad + " al carrito!")
         setIrCarrito(true)
+        agregarAlCarrito({...producto, cantidad: cantidad})
+        console.log(cartList)
     }
 
     return (
