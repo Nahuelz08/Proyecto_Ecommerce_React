@@ -8,7 +8,7 @@ function ItemDetail({producto}) {
 
     const [irCarrito, setIrCarrito] = useState(false)
 
-    const {cartList, agregarAlCarrito} = useContext(CartContext)
+    const {cartList, agregarAlCarrito, unidades} = useContext(CartContext)
 
     // Agregar al carrito, muestra por consola la cantidad añadida
     const onAdd = (cantidad) => {
@@ -28,6 +28,7 @@ function ItemDetail({producto}) {
                     <h3 className="fw-bold">{producto.name}</h3>
                     <h4>${producto.price}</h4>
                     <p>{producto.description}</p>
+                    <h5>Stock: {producto.stock}</h5>
                     {!irCarrito ? 
                     <ItemCount inicial={1} max={producto.stock} onAdd={onAdd} /> 
                     : 

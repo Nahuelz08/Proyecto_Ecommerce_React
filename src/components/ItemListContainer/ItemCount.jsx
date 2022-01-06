@@ -4,7 +4,7 @@ function ItemCount({inicial, max, onAdd}) {
 
     const [value, setValue] = useState(inicial)
 
-    // Sumar, no permite pasar las 10 unidades
+    // Sumar, no permite pasar las unidades de stock
     const btnSumar = () => {
         value < max ?  setValue(value + 1) : console.log("Stock maximo")
     }

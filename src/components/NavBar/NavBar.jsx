@@ -6,7 +6,7 @@ import logo from '../../assets/img/logo.png'
 import CartWidget from '../Cart/CartWidget'
 import '../Cart/Cart.css'
 
-const NavBar = () => {
+const NavBar = ({cartCount}) => {
 	return (
         <>
             <Navbar bg="dark" variant="dark" expand="lg">
@@ -23,7 +23,7 @@ const NavBar = () => {
                         </Navbar.Brand>
                     </Link>
                     <Link className="cart-mobile" style={{paddingRight:'2rem'}} to="/cart">
-                        <CartWidget />
+                        <CartWidget cartCount={cartCount} />
                     </Link> 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
@@ -40,7 +40,7 @@ const NavBar = () => {
                         </Nav>
                     </Navbar.Collapse>
                     <Link className="cart-desktop" to="/cart">
-                        <CartWidget />
+                        <CartWidget cartCount={cartCount} />
                     </Link> 
                 </Container>
             </Navbar>

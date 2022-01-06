@@ -1,4 +1,19 @@
-
+.cartCount {
+    color: white;
+    font-size: 1.5rem;
+}
+.cart-desktop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.cart-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
 
 
 /*vista mobile*/
