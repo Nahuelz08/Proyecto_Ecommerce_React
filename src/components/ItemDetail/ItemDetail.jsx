@@ -34,7 +34,10 @@ function ItemDetail({producto}) {
                     : 
                     <div className="d-flex justify-content-center">
                         <Link to={`/cart`}> 
-                            <button className="btn btn-danger bg-gradient mt-3">Ir al carrito</button>
+                            <button className="btn btn-danger bg-gradient me-3 mt-3">Ir al carrito</button>
+                        </Link>
+                        <Link to={`/`}> 
+                            <button className="btn btn-danger bg-gradient ms-3 mt-3">Seguir comprando</button>
                         </Link>
                     </div>
                     }

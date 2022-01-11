@@ -3,9 +3,11 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
+import Error404 from './Error404.jsx';
 import CartContextProvider from './components/CartContext/CartContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/style.css'
+import FormBuyer from './components/FormBuyer/FormBuyer';
 
 function App() {
 
@@ -34,6 +36,15 @@ function App() {
 							exact 
 							path="/cart"
 							element={<Cart />}
+						/>	
+						<Route
+							exact 
+							path="/checkout"
+							element={<FormBuyer />}
+						/>	
+						<Route
+							path="*"
+							element={<Error404 />}
 						/>	
 					</Routes>
 				</div>
