@@ -12,6 +12,8 @@ Este es el proyecto final del curso dictado por [CoderHouse](https://www.coderho
 Se trata sobre un Ecommerce, el cual está creado con Vite.
 Se implementa React.js con React Router, React Hooks, Bootstrap (tanto común como React Bootstrap), React-Icons, React-Spinners, Firebase.
 
+Ademas los productos al realizar la compra se descuentan del stock almacenado en Firebase, actualizandose en tiempo real segun la cantidad vendida.
+
 
 ## *Version Final:*
 Link a Vercel del proyecto: 
@@ -54,7 +56,7 @@ Link a Vercel del proyecto:
   cd Proyecto_Ecommerce_React
   ```
 
--  Instala las dependencias.
+- Instala las dependencias.
   ```bash
   npm install
   ```
