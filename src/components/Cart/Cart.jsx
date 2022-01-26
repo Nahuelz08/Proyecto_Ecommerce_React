@@ -2,13 +2,15 @@ import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../CartContext/CartContext'
 import CartList from '../CartList/CartList'
+import banner from './../../assets/img/gamingpc.jpg'
 
 function Cart() {
 
-    const {cartList, eliminarItem, vaciarCarrito, totalBuy} = useContext(CartContext)
+    const { cartList } = useContext(CartContext)
 
     return (
         <>
+            <img src={banner} className="img-fluid"></img>
             {cartList.length === 0
             ? 
                 <div className="container mt-5">
@@ -21,9 +23,7 @@ function Cart() {
                     </div>
                 </div>
             :
-            <>
                 <CartList />
-            </>
             }
         </>
     )

@@ -1,0 +1,18 @@
+.footer__logo {
+    width: 150px;
+}
+
+.redes__sociales {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.logoSocial {
+    margin-right: 2rem;
+}
+
+.footer-final {
+    background-color: rgb(24, 24, 24);
+}

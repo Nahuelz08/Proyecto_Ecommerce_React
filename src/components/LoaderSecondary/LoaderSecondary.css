@@ -1,0 +1,41 @@
+
+/*vista mobile*/
+@media only screen and (min-width:0px) and (max-width:767px){
+    .loaderSecondaryContainerMobile{
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0.5rem) !important;
+    }
+    .loaderSecondaryContainer {
+        display: none !important;
+    }
+}
+
+/* vista entre desktop y mobile */
+@media only screen and (min-width:768px) and (max-width:1239px){
+    .loaderSecondaryContainerMobile{
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0.5rem) !important;
+    }
+    .loaderSecondaryContainer {
+        display: none !important;
+    }
+}
+
+/*vista desktop */
+@media only screen and (min-width:1240px){
+    .loaderSecondaryContainer{
+        min-height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loaderSecondaryContainerMobile {
+        display: none;
+    }
+}

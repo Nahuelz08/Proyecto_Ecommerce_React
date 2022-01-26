@@ -2,11 +2,11 @@ import { memo } from 'react'
 import Item from '../Item/Item';
 
 const ItemList = memo(
-    ({productos}) => {
+    ({products}) => {
         return (
                 <>
-                    { productos.map((prod) =>
-                                            <Item prod={prod} key={prod.id}/>
+                    { products.map((prod) =>
+                        <Item prod={prod} key={prod.id}/>
                     )}
                 </>
         );

@@ -8,6 +8,7 @@ import CartContextProvider from './components/CartContext/CartContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/style.css'
 import FormBuyer from './components/FormBuyer/FormBuyer';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
 							element={<Error404 />}
 						/>	
 					</Routes>
+					<Footer />
 				</div>
 			</BrowserRouter>
 		</CartContextProvider>

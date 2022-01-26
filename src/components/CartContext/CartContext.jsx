@@ -6,54 +6,49 @@ export const CartContext = createContext([])
 const CartContextProvider = ({children}) => {
 
     const [cartList, setCartList] = useState([])
-    // const [unidades, setUnidades] = useState(0)
 
-    function agregarAlCarrito(item){
+    function addToCart(item){
 
         const index = cartList.findIndex(i => i.id === item.id)
 
         if (index > -1) {
-            const oldItem = cartList[index].cantidad
+            const oldItem = cartList[index].quantity
             cartList.splice(index, 1)
-            setCartList([...cartList, {...item, cantidad: item.cantidad + oldItem}])
+            setCartList([...cartList, {...item, quantity: item.quantity + oldItem}])
         } else {
             setCartList([...cartList, item])
         }
-        console.log(cartList)
-        // setUnidades(unidades = cartList.reduce((acc, item) => acc += item.cantidad, 0)) 
     }
 
-    const eliminarItem = (id) => {
-        const carritoFiltrado = cartList.filter((item) => item.id !== id)
-        setCartList(carritoFiltrado)
-        // setUnidades(unidades - 1) 
+    const removeItem = (id) => {
+        const filteredCart = cartList.filter((item) => item.id !== id)
+        setCartList(filteredCart)
     }
 
 
-    function vaciarCarrito(){
+    function emptyCart(){
         setCartList([])
-        // setUnidades(0) 
     }
 
     // Contador carrito
     const cartCounter = () => {
         return (
-            cartList.reduce((prev, prod) => (prev + prod.cantidad), 0)
+            cartList.reduce((prev, prod) => (prev + prod.quantity), 0)
         )
     }
     // Subtotal compra
     const totalBuy = () => {
         return ( 
-            cartList.reduce((prev, prod) => (prev + prod.cantidad * prod.price), 0)
+            cartList.reduce((prev, prod) => (prev + prod.quantity * prod.price), 0)
         )
     }
 
     return (
         <CartContext.Provider value={{
             cartList,
-            agregarAlCarrito,
-            eliminarItem,
-            vaciarCarrito,
+            addToCart,
+            removeItem,
+            emptyCart,
             cartCounter,
             totalBuy
         }}>
